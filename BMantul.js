@@ -30,6 +30,7 @@ let scoreVal = 0;
 let wallRadius = 50;
 let walls = [];
 
+
 function setup() {
   createCanvas(500, 500);
   ballColor = color(0);
@@ -192,8 +193,8 @@ function wallDrawer(i) {
   rectMode(CORNER);
   fill(255, 0, 0);
 
-  rect(wall.x, 0, wall.w, wall.y);
-  rect(wall.x, wall.y + wall.h, wall.w, height - (wall.y + wall.h));
+  rect(wall.x, 0, wall.w, wall.y, wallRadius);
+  rect(wall.x, wall.y + wall.h, wall.w, height - (wall.y + wall.h), wallRadius);
 }
 
 function watchWallCollision(i) {
