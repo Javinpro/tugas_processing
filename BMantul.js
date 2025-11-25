@@ -168,7 +168,8 @@ function wallAdder() {
       y: gapY,
       w: wallWidth,
       h: gapHeight,
-      scored: false
+      scored: false,
+      color: color(random(255), random(255), random(255)) // warna random
     });
 
     lastAddTime = millis();
@@ -191,7 +192,7 @@ function wallMover(i) {
 function wallDrawer(i) {
   let wall = walls[i];
   rectMode(CORNER);
-  fill(255, 0, 0);
+  fill(wall.color);
 
   rect(wall.x, 0, wall.w, wall.y, wallRadius);
   rect(wall.x, wall.y + wall.h, wall.w, height - (wall.y + wall.h), wallRadius);
