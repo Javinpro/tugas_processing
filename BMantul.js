@@ -27,7 +27,7 @@ let healthDecrease = 1;
 let healthBarWidth = 60;
 let scoreVal = 0;
 
-let wallRadius = 50;
+let wallRadius = 15;
 let walls = [];
 
 
